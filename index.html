@@ -13,7 +13,8 @@
 </head>
 
 <body>
-    <div ng-app="">
+  <div ng-app="firstApp">
+    <div>
         <p>Name: <input type="text" ng-model="name"></p>
         <p>{{name}}</p>
         <h3>The below is AJ expression value!!</h3>
@@ -21,6 +22,27 @@
           {{5 + 6}}
         </p>
     </div>
+
+    <div ng-controller = "AddingDiv">
+        <p>
+          <input placeholder="Enter First Number " type="number" ng-model="num_one"  />
+          &nbsp;&nbsp; + &nbsp;&nbsp;
+          <input placeholder="Enter Second Number " type="number" ng-model="num_two"  />
+          &nbsp;&nbsp; = &nbsp;&nbsp;
+          {{ num_one + num_two }}
+        </p>
+    </div>
+  </div>
+
+
+      <script>
+        var app = angular.module('firstApp', []);
+        app.controller('AddingDiv', function($scope) {
+            $scope.num_one = 2;
+            $scope.num_two = 1;
+        });
+      </script>
+
 </body>
 
 </html>
