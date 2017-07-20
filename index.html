@@ -13,8 +13,8 @@
 </head>
 
 <body>
-  <div ng-app="firstApp">
-    <div>
+  <div ng-app="angel" ng-init="color='#678'">
+    <div style="background-color: {{color}}">
         <p>Name: <input type="text" ng-model="name"></p>
         <p>{{name}}</p>
         <h3>The below is AJ expression value!!</h3>
@@ -34,15 +34,7 @@
     </div>
   </div>
 
-
-      <script>
-        var app = angular.module('firstApp', []);
-        app.controller('AddingDiv', function($scope) {
-            $scope.num_one = 2;
-            $scope.num_two = 1;
-        });
-      </script>
-
 </body>
-
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
 </html>
